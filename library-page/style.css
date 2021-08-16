@@ -1,0 +1,207 @@
+@import "variables.css";
+* {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+main {
+  padding: 0px 15px;
+}
+h1 {
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+h2 {
+  font-size: 25px;
+}
+p {
+  opacity: 0.5;
+}
+.status-bar {
+  width: 100%;
+  height: 101px;
+  background-color: var(--yellow);
+  padding: 31px 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.status-bar span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.status-bar i {
+  transition: all 0.1s ease-in-out;
+}
+.status-bar i:hover {
+  color: red;
+  transform: scale(1.5);
+}
+
+.search-bar {
+  width: 90%;
+  height: 50px;
+  border-radius: 25px;
+  padding: 14px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--grey);
+  position: relative;
+  top: -25px;
+  background-color: white;
+}
+.search-bar input {
+  width: 95%;
+  outline: none;
+  border: none;
+  font-size: 15px;
+}
+.search-bar input::placeholder {
+  opacity: 0.5;
+}
+
+.book-of-the-day {
+  margin-bottom: 40px;
+}
+.book-of-the-day__contents {
+  display: flex;
+}
+.book-of-the-day__contents-img {
+  width: 110px;
+  height: 170px;
+  border-radius: 10px;
+  margin-right: 15px;
+}
+.book-of-the-day__contents-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.book-of-the-day__contents-info-book {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75px;
+}
+.star-icon {
+  color: var(--yellow);
+}
+.star-icon:last-child {
+  color: var(--grey);
+}
+.star--small {
+  font-size: 10px;
+}
+.book-of-the-day__contents-info-type span{
+  margin: 0px 20px;
+  font-size: 13px;
+}
+.book-of-the-day__contents-info-buttons {
+  display: flex;
+  align-items: center;
+}
+@keyframes bouncing {
+  0%   { transform: scale(1,1)    translateY(0); }
+  10%  { transform: scale(1.1,.9) translateY(0); }
+  30%  { transform: scale(.9,1.1) translateY(-10px); }
+  50%  { transform: scale(1,1)    translateY(0); }
+  57%  { transform: scale(1,1)    translateY(-7px); }
+  64%  { transform: scale(1,1)    translateY(0); }
+  100% { transform: scale(1,1)    translateY(0); }
+}
+@keyframes shaking {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+#book-mark {
+  width: 35px;
+  height: 35px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-right: 50px;
+} 
+#book-mark:hover {
+  animation: bouncing 1s ease infinite;
+  cursor: pointer;
+}
+#book-now {
+  width: 120px;
+  height: 34px;
+  padding: 10px 10px;
+  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#book-now:hover {
+  animation: shaking 1s ease infinite;
+  cursor: pointer;
+}
+#book-now span {
+  color: white;
+  font-size: 13px;
+}
+
+.top-adventures {
+  margin-bottom: 40px;
+}
+.top-adventures__contents {
+  display: flex;
+  justify-content: space-between;
+}
+.top-adventures__contents-item {
+  display: flex;
+  flex-direction: column;
+}
+.top-adventures__contents-item img {
+  width: 70px;
+  height: 106px;
+  border-radius: 6px;
+  margin-right: 15px;
+  display: block;
+  margin-bottom: 5px;
+  transition: transform 0.5s ease-out;
+}
+.top-adventures__contents-item img:hover {
+  transform: translateY(-10px);
+}
+
+.popular-authors {
+  margin-bottom: 40px;
+}
+.popular-authors__contents {
+  display: flex;
+}
+.popular-authors__contents img {
+ width: 109px;
+ height: 129px;
+ border-radius: 6px;
+ margin-right: 15px;
+}
+.popular-authors__contents-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+popular-authors__contents-info p {
+  width: 100px;
+}
